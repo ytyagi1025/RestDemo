@@ -30,6 +30,7 @@ public class EmployeeController {
 	
 	@PostMapping("addEmployee")
 	public ResponseEntity<Object> addEmp(@RequestBody Employee emp){
+		//to add a new record
 		try {
 			empRepo.save(emp);
 			return new ResponseEntity<Object>(HttpStatus.OK);
